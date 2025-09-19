@@ -19,7 +19,6 @@ import "./index.css";
 import CancelLeave from "./components/CancelLeave";
 import ApplyLeave from "./components/ApplyLeave";
 import PaternityLeave from "./components/PaternityLeave";
-
 export default function App() {
   return (
     <div className="app">
