@@ -3,13 +3,11 @@ import "../styles/TransferWorkflow.css";
 import transferworkflowIcon from "../assets/transferworflow.svg";
 import markdownarrowIcon from "../assets/markdownarrow.svg";
 import transferWFIcon from "../assets/transferWF.svg";
-import viewPoliceIcon from "../assets/viewpolice.svg";
 
 const TransferWorkflow = ({
   defaultTransferTo = "Krishna@samsung.com",
   defaultComment = "I have an important personal matter to attend at my Home town.",
   onTransferWFClick,
-  onViewPoliciesClick,
 }) => {
   const [selectedRequestType, setSelectedRequestType] = useState("transferTo");
 
@@ -20,13 +18,6 @@ const TransferWorkflow = ({
     console.log("Transfer WF button clicked");
     if (onTransferWFClick) {
       onTransferWFClick();
-    }
-  };
-
-  const handleViewPoliciesClick = () => {
-    console.log("View Policies clicked");
-    if (onViewPoliciesClick) {
-      onViewPoliciesClick();
     }
   };
 
@@ -117,18 +108,6 @@ const TransferWorkflow = ({
             />
             Transfer WF
           </button>
-        </div>
-
-        <div
-          className="view-policies-section"
-          onClick={handleViewPoliciesClick}
-        >
-          <img
-            src={viewPoliceIcon}
-            alt="View Policies"
-            className="view-policies-icon"
-          />
-          <span className="view-policies-text">View Policies</span>
         </div>
       </div>
     </div>

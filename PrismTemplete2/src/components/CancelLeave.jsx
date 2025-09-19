@@ -4,7 +4,6 @@ import Header from "./Header";
 import EmployeeProfile from "./EmployeeProfile";
 import RequiredInfo from "./CancelLeaveHeader";
 import applyIcon from "../assets/applyicon.svg";
-import viewPoliceIcon from "../assets/viewpolice.svg";
 
 const CancelLeave = () => {
   // Event handlers for all clickable components
@@ -190,15 +189,6 @@ const CancelLeave = () => {
             <div className="action-buttons">
               <button className="cancel-button">Cancel</button>
               <button className="submit-button">Submit</button>
-            </div>
-
-            <div className="view-policies-section">
-              <img
-                src={viewPoliceIcon}
-                alt="View Policies"
-                className="view-policies-icon"
-              />
-              <span className="view-policies-text">View Policies</span>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/RequiredInfo.css";
-import ViewPolicies from "./ViewPolicies";
 import ClipboardIcon from "../assets/clipboard-green-24x26.svg";
 import InfoSmall from "../assets/info-small-18x19.svg";
 import VisaForm13 from "./VisaForm14";
@@ -43,11 +42,6 @@ const RequiredInfo13 = ({ onClick, className = "" }) => {
       <div className="worklet-details-card">
         <div className="form-sections-container">
           <VisaForm13 />
-          <br />
-          <br />
-          <div style={{ marginTop: 8 }}>
-            <ViewPolicies />
-          </div>
           <br />
           <br />
         </div>

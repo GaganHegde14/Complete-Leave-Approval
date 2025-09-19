@@ -73,11 +73,6 @@ const PaternityLeave = () => {
     // Add your transfer workflow logic here
   };
 
-  const handleViewPoliciesClick = () => {
-    console.log("View Policies clicked");
-    // Add your view policies logic here
-  };
-
   // Employee data object
   const employeeData = {
     initials: "MK",
@@ -180,10 +175,7 @@ const PaternityLeave = () => {
               </button>
             </div>
 
-            <TransferWorkflow
-              onTransferWFClick={handleTransferWFClick}
-              onViewPoliciesClick={handleViewPoliciesClick}
-            />
+            <TransferWorkflow onTransferWFClick={handleTransferWFClick} />
           </div>
         </div>
       </div>
