@@ -1,0 +1,314 @@
+/* LeaveTable.module.css */
+
+/* Main Container */
+.tableContainer {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 6px;
+  margin: 35px 0 200px;
+
+}
+
+/* Content Header */
+.contentHeader {
+  padding: 10px 16px;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.tableTitle {
+  font-family: 'Samsung InterFace', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  color: #202224;
+  margin: 0;
+}
+
+/* Table Frame */
+.tableFrame {
+  width: 100%;
+}
+
+.tableWrapper {
+  width: 100%;
+}
+
+/* Table Header */
+.tableHeader {
+  width: 100%;
+}
+
+.headerContainer {
+  background: #eff6ff;
+  padding: 10px 24px;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 15px !important;
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  gap: 4px !important;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.headerCell:hover {
+  color: #344054;
+}
+
+.headerLabel {
+  font-family: 'Samsung InterFace', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  letter-spacing: -0.5%;
+  color: #202224;
+  white-space: nowrap;
+}
+
+.sortIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.headerCell:hover .sortIcon {
+  opacity: 1;
+}
+
+/* Column Widths - Evenly Distributed */
+.leaveTypeCol {
+  flex: 1;
+  min-width: 0;
+  padding-left: 30px;
+}
+
+.appliedDateCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.leaveFromCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.leaveToCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.noOfDaysCol {
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+}
+
+.RefDateCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.HolidayListCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.RelaitonCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.SubCategoriesCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.DurationCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.ProgramNameCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.InstituteCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.CourseComencementDateCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.ExpectedDeliveryDateCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.AttratchmentCol {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Header Separator */
+.headerSeparator {
+  width: 100%;
+  height: 1px;
+  position: relative;
+}
+
+.separatorLine {
+  width: 100%;
+  height: 1px;
+  background: #e4e7ec;
+}
+
+/* Table Body */
+.tableBody {
+  width: 100%;
+}
+
+.tableRow {
+  width: 100%;
+  border-bottom: 1px solid #e4e7ec;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: #f9fafb;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.rowContainer {
+  padding: 17px 24px 16px 24px;
+}
+
+.rowGroup {
+  width: 100%;
+}
+
+.cellGroup {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.dataCell {
+  font-family: 'Samsung InterFace', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 145%;
+  color: #202224;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Data cell column widths - match header */
+.dataCell.leaveTypeCol {
+  flex: 1;
+  min-width: 0;
+  padding-left: 30px;
+}
+
+.dataCell.appliedDateCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.dataCell.leaveFromCol {
+  flex: 1;
+  min-width: 0;
+  color: #101928;
+}
+
+.dataCell.leaveToCol {
+  flex: 1;
+  min-width: 0;
+  color: #101928;
+}
+
+.dataCell.noOfDaysCol {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .headerContainer,
+  .rowContainer {
+    padding: 10px 16px;
+  }
+  
+  .headerRow,
+  .cellGroup {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .headerLabel,
+  .dataCell {
+    font-size: 12px;
+  }
+  
+  /* Keep evenly distributed columns on mobile too */
+  .leaveTypeCol,
+  .appliedDateCol,
+  .leaveFromCol,
+  .leaveToCol,
+  .noOfDaysCol {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .headerRow,
+  .cellGroup {
+    gap: 8px;
+  }
+  
+  .sortIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer,
+  .rowContainer {
+    padding: 8px 12px;
+  }
+  
+  .tableTitle {
+    font-size: 12px;
+  }
+  
+  .contentHeader {
+    padding: 8px 12px;
+  }
+}

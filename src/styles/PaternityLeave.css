@@ -1,0 +1,417 @@
+.paternity-leave-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  background: #ffffff;
+  font-family: "Samsung InterFace", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.employee-submit-text {
+  font-size: 0.65em;
+  font-weight: 600;
+}
+
+.apply-leave-section {
+  background: #f5f5f5;
+  padding: 20px 24px;
+  margin: 0 16px 16px 16px;
+  border-radius: 8px;
+}
+
+.apply-leave-content {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+}
+
+.apply-approval-section {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: none;
+}
+
+.apply-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.leave-list-section {
+  margin-bottom: 20px;
+}
+
+.leave-list-title {
+  font-size: 15px;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 0;
+  background: white;
+  padding: 12px 35px;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.leave-table-container {
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  table-layout: fixed;
+}
+
+.leave-table th {
+  background: #eff6ff;
+  padding: 12px 35px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.leave-table td {
+  padding: 12px 35px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.leave-table th:nth-child(1),
+.leave-table td:nth-child(1) {
+  width: 140px !important;
+  padding-left: 35px !important;
+  padding-right: 12px !important;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.leave-table th:nth-child(2),
+.leave-table td:nth-child(2) {
+  width: 180px !important;
+  padding-left: 60px !important;
+  white-space: nowrap;
+}
+
+.leave-table th:nth-child(3),
+.leave-table td:nth-child(3) {
+  width: 180px !important;
+  padding-left: 40px !important;
+  white-space: nowrap;
+}
+
+.leave-table th:nth-child(4),
+.leave-table td:nth-child(4) {
+  width: 180px !important;
+  padding-left: 40px !important;
+  white-space: nowrap;
+}
+
+.leave-table th:nth-child(5),
+.leave-table td:nth-child(5) {
+  width: 130px !important;
+  padding-left: 40px !important;
+  white-space: nowrap;
+}
+
+.leave-table th:nth-child(6),
+.leave-table td:nth-child(6) {
+  width: 130px !important;
+  padding-left: 40px !important;
+  padding-right: 20px !important;
+  white-space: nowrap;
+}
+
+.leave-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leave-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.reason-section {
+  margin-bottom: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+.reason-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.reason-textarea {
+  width: 100%;
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  padding: 0 12px; /* horizontal padding only */
+  display: block;
+  line-height: 1.4; /* normal line height for proper text flow */
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  /* Use padding-top to maintain vertical centering without breaking text input */
+  padding-top: 30px;
+  padding-bottom: 5px;
+  overflow-y: auto; /* allow scrolling for longer text */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.reason-textarea:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}
+
+.readonly-textarea {
+  background-color: #efeded !important;
+  cursor: not-allowed;
+  padding: 0 12px !important; /* horizontal padding only - same as ApplyLeave */
+  display: block !important;
+  line-height: 1.4 !important; /* normal line height */
+  text-align: left !important;
+  /* Use padding-top to maintain vertical centering - same as ApplyLeave */
+  padding-top: 30px !important;
+  padding-bottom: 5px !important;
+  overflow-y: auto !important; /* allow scrolling if content is long */
+}
+
+.readonly-textarea:focus {
+  outline: none !important;
+  border-color: #d0d0d0 !important;
+  box-shadow: none !important;
+}
+
+.comment-section {
+  margin-bottom: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+.comment-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.comment-textarea {
+  width: 100%;
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  padding: 0 12px; /* horizontal padding only */
+  display: block;
+  line-height: 90px; /* vertical centering for single-line content */
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 0;
+  margin-bottom: 0;
+  align-items: flex-start;
+}
+
+.reject-button {
+  padding: 8px 20px;
+  border: 2px solid #38aee0;
+  background-color: white;
+  color: #38aee0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.approval-button {
+  padding: 8px 20px;
+  border: 2px solid #38aee0;
+  background-color: #38aee0;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .paternity-leave-container {
+    padding: 16px;
+  }
+
+  .apply-leave-section {
+    margin: 8px;
+    padding: 16px;
+  }
+
+  .leave-table-container {
+    font-size: 12px;
+  }
+
+  .leave-table th,
+  .leave-table td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .reject-button,
+  .approval-button {
+    width: 100%;
+  }
+}
+
+/* Textarea styles for reason and comment fields */
+.reason-section {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.reason-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.reason-textarea {
+  width: 100%;
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  padding: 0 12px;
+  display: block;
+  line-height: 1.4;
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  overflow: hidden; /* prevent scrollbar */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.reason-textarea:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}
+
+.readonly-textarea {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.comment-section {
+  margin-bottom: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.comment-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.comment-textarea {
+  width: 100%;
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  padding: 0 12px;
+  display: block;
+  line-height: 1.4;
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  overflow: hidden; /* prevent scrollbar */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}

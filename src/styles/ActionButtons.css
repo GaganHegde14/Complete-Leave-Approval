@@ -1,0 +1,22 @@
+.action-buttons-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: flex-end;
+}
+
+.action-button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.reject-svg {
+  width: auto;
+  height: 40px;
+}
+
+.approve-svg {
+  width: auto;
+  height: 40px;
+}

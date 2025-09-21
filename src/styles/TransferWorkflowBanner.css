@@ -1,0 +1,55 @@
+.tw-banner {
+  position: relative;
+  /* Bleed to the edges of the leave-approval-form which has 24px padding */
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  height: 39px;         /* match reference height */
+  overflow: hidden;     /* clip overflow */
+}
+
+/* Background strip should touch left and right edges */
+.tw-bg {
+  position: absolute;
+  inset: 0;             /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Symbol cluster on the left, positioned like the reference */
+.tw-symbol {
+  position: absolute;
+  left: 32px;           /* approximated from reference SVG x=32 start */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;         /* matches 24x24 viewbox in reference area */
+}
+
+/* Title text next to the symbol */
+.tw-title {
+  position: absolute;
+  left: 64px;           /* place to the right of the symbol */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: #1D1B20;
+  letter-spacing: 0.2px;
+}
+
+/* Chevron on the right edge, centered vertically */
+.tw-chevron {
+  position: absolute;
+  right: 24px;          /* visual alignment to reference */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;         /* scale to fit the 39px strip */
+}
+
+@media (max-width: 768px) {
+  /* leave-approval-form padding becomes 20px in mobile CSS */
+  .tw-banner {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+}

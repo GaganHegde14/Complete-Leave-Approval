@@ -1,0 +1,135 @@
+/* Frame 1000007590 Component Styles */
+.frame-1000007590 {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+
+.content-header {
+  padding: 8px 16px;
+  background: #ffffff;
+}
+
+.leave-list-title {
+  font-family: 'Samsung InterFace', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #202224;
+  margin: 0;
+}
+
+.table-container {
+  width: 100%;
+}
+
+.table-wrapper {
+  width: 100%;
+}
+
+.table-header {
+  background: #eff6ff;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0;
+  padding: 8px 16px;
+  min-height: 32px;
+  align-items: center;
+}
+
+.header-cell {
+  font-family: 'Samsung InterFace', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: #202224;
+  padding: 0 4px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: #e4e7ec;
+}
+
+.table-body {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-top: none;
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0;
+  padding: 12px 16px;
+  min-height: 40px;
+  align-items: center;
+}
+
+.data-cell {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  padding: 0 4px;
+}
+
+.data-cell.leave-type {
+  color: #101928;
+}
+
+.data-cell.applied-date,
+.data-cell.leave-from,
+.data-cell.leave-to,
+.data-cell.ref-date,
+.data-cell.no-of-days {
+  color: #202224;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-row,
+  .data-row {
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .header-cell,
+  .data-cell {
+    font-size: 12px;
+    padding: 0 4px;
+  }
+  
+  .leave-list-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-row,
+  .data-row {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .header-cell:nth-child(4),
+  .header-cell:nth-child(5),
+  .header-cell:nth-child(6),
+  .data-cell:nth-child(4),
+  .data-cell:nth-child(5),
+  .data-cell:nth-child(6) {
+    grid-row: 2;
+  }
+}
