@@ -1,0 +1,331 @@
+.required-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0;
+  padding: 1px 16px;
+}
+
+.cancel-leave-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative; /* Added for positioning context */
+}
+
+.clipboard-icon {
+  font-size: 24px;
+  color: #333333;
+}
+
+.required-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Samsung InterFace", "Segoe UI", Arial, sans-serif;
+}
+
+.grey-icon-header {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+/* Active state for the info icon (turns icon to rgba(0, 122, 255, 1)) */
+.grey-icon-header.active {
+  /* Colorize the SVG img via filter to approximate #007AFF */
+  filter: invert(33%) sepia(93%) saturate(3633%) hue-rotate(197deg) brightness(101%) contrast(107%);
+  transition: filter 120ms ease-in-out;
+}
+
+.financial-year-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1px 10px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  min-height: 44px;
+}
+
+.leave-balance-heading {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(32, 34, 36, 1);
+}
+
+.financial-year-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.year-options {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked {
+  border-color: rgba(56, 174, 224, 1);
+  background: white;
+}
+
+.radio-option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(56, 174, 224, 1);
+}
+
+.radio-text {
+  color: rgba(32, 34, 36, 1);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.radio-option input[type="radio"]:checked + .radio-text {
+  font-weight: 700;
+  color: rgba(32, 34, 36, 1);
+}
+
+/* Leave summary row */
+.leave-summary-row {
+  display: grid;
+  
+  grid-template-columns: repeat(7, minmax(180px, 1fr));
+  gap: 16px;
+  width: 95%;
+   margin-left: 38px;
+  
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+
+.leave-card {
+  border-radius: 12px;
+  
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.leave-card-title {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+  font-size: 14px;
+}
+
+.leave-card-days {
+  font-weight: 700;
+  color: rgba(32, 34, 36, 1);
+  font-size: 14px;
+}
+
+.leave-cards-next {
+  position: absolute;
+     top: 33px;
+    right: -23px;
+    width: 42px;
+    height: 20px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.leave-cards-next:hover,
+.leave-cards-next:focus,
+.leave-cards-next:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.leave-cards-next img { width: 28px; height: 28px;   }
+.notification-icon-header {
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  opacity: 0.8;
+}
+
+/* --- REMOVED: .leave-detail-modal-overlay style is no longer needed --- */
+
+/* Renamed and restyled modal to be a popover */
+.leave-detail-popover {
+  position: absolute;
+  top: 292px; /* Position below the header */
+  left: 67px;
+  z-index: 1000;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 919px;
+  padding: 20px 24px;
+}
+
+  /* Arrow removed as requested */
+  .leave-detail-popover::before {
+  content: none;
+  display: none;
+  }
+
+.leave-detail-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.leave-detail-modal-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.leave-detail-modal-close {
+  background-color: rgba(56, 174, 224, 1);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  bottom: 2px;;
+  font-size: 20px;
+  border-color: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  padding-bottom: 2px;
+}
+.leave-detail-modal-close:hover,
+.leave-detail-modal-close:focus{
+  border-color:none;
+  outline: none;
+}
+
+.leave-detail-table-container {
+  overflow-x: hidden;
+  /* Show vertical scroll like the design */
+  overflow-y: auto;
+  max-height: 220px; /* slightly less height as requested */
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 12px;
+  background: #ffffff;
+  /* keep layout from shifting when the scrollbar appears */
+  scrollbar-gutter: stable both-edges;
+  /* small right padding so rows don't hide under the scrollbar */
+  padding-right: 4px;
+}
+
+.leave-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.leave-detail-table thead tr {
+  background-color: #f0f6ff;
+}
+
+.leave-detail-table th,
+.leave-detail-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(228, 231, 236, 1);
+  color: rgba(52, 64, 84, 1);
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+.leave-detail-table th {
+  font-weight: 700;
+  color: rgba(52, 64, 84, 1);
+  /* keep header visible while scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f0f6ff;
+  /* subtle separation like the mock */
+  box-shadow: 0 1px 0 rgba(228, 231, 236, 1);
+}
+
+.leave-detail-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.leave-detail-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+  /* Custom scrollbar – WebKit browsers */
+  .leave-detail-table-container::-webkit-scrollbar {
+  width: 14px; /* thicker, pill-like track */
+  }
+
+  .leave-detail-table-container::-webkit-scrollbar-track {
+  background: #eaf1fb; /* light bluish track */
+  border-radius: 999px; /* fully rounded ends */
+  /* inset to simulate inner trough */
+  box-shadow: inset 0 0 0 6px #f7faff;
+  }
+
+  .leave-detail-table-container::-webkit-scrollbar-thumb {
+  background: rgb(224, 56, 56); /* Samsung blue */
+  border-radius: 999px;
+  /* border in track color to create spacing around the thumb */
+  border: 3px solid #eaf1fb;
+  }
+
+  .leave-detail-table-container::-webkit-scrollbar-thumb:hover {
+  background: #2f9ecf;
+  }
+
+/* Custom scrollbar – Firefox */
+.leave-detail-table-container {
+  scrollbar-width: thin; /* thin scrollbar */
+  scrollbar-color: rgba(56, 174, 224, 1) #eef2f6; /* thumb track */
+}
